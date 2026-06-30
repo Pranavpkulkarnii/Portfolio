@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pranav Kulkarni | Engineering student focused on hardware troubleshooting, embedded systems, and system-level engineering." />
+    <title>Pranav Kulkarni | Engineering Student Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-ring"></div>
+      <p>Crafting a premium experience...</p>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home">Pranav<span></span></a>
+        <nav class="site-nav" id="siteNav">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#mini-games" class="nav-link">Mini-Games</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="theme-icon">☾</span>
+          </button>
+          <button class="hacker-toggle" id="hackerToggle" aria-pressed="false" title="Toggle hacker mode">💚</button>
+          <a href="#contact" class="btn btn-primary">Hire me</a>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Hello, I’m</span>
+            <h1>Pranav Kulkarni</h1>
+            <p class="hero-subtitle">Engineering student with hardware troubleshooting expertise, embedded systems understanding, and clean technical delivery.</p>
+            <div class="hero-typing">
+              <span>Specializing in</span>
+              <div class="typing-text" id="typingText"></div>
+            </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">View work</a>
+              <a class="btn btn-stroke" href="#contact">Let’s connect</a>
+            </div>
+            <div class="hero-meta">
+              <div>
+                <p>2 years</p>
+                <span>Engineering experience</span>
+              </div>
+              <div>
+                <p>3</p>
+                <span>Projects completed</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-panel glass-card" id="featuredPanel">
+            <div class="panel-header">
+              <span>Featured</span>
+              <span class="badge" id="featureBadge">GV Pro</span>
+            </div>
+            <div class="project-preview">
+              <h2 id="featuredTitle">Ghost Free Vault</h2>
+              <p id="featuredDescription">A secure financial management platform presented at college-level hackathons including TECH-TANTRA 1.0 and CHAKRAVYUH 2.0.</p>
+            </div>
+            <div class="panel-stats">
+              <div>
+                <p id="featuredStat1">3</p>
+                <span>Project showcases</span>
+              </div>
+              <div>
+                <p id="featuredStat2">2</p>
+                <span>Research papers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-hint">
+          <span>Scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <section class="section" id="mini-games">
+        <div class="container">
+          <header class="mini-games-header">
+            <h2>Mini-Game Arcade</h2>
+            <p class="lead">Browse small, focused games — tap an app to install and run inside the preview panel.</p>
+          </header>
+
+          <div class="mini-games-grid">
+            <aside class="app-catalog">
+              <div class="app-list" id="appList">
+                <article class="app-card" data-app="vault-hacker">
+                  <div class="app-icon">VT</div>
+                  <div class="app-meta">
+                    <h3 class="app-title">Vault Hacker</h3>
+                    <p class="app-desc">Crack a 4-digit code using logic hints (Mastermind-like).</p>
+                    <div class="app-footer">
+                      <span class="tag easy">Logic</span>
+                      <button class="btn install" data-app="vault-hacker">Launch</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="app-card" data-app="grid-hunter">
+                  <div class="app-icon">GH</div>
+                  <div class="app-meta">
+                    <h3 class="app-title">Grid Hunter</h3>
+                    <p class="app-desc">10×10 treasure hunt with directional & distance feedback.</p>
+                    <div class="app-footer">
+                      <span class="tag medium">Explorer</span>
+                      <button class="btn install" data-app="grid-hunter">Launch</button>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="app-card" data-app="choice-protocol">
+                  <div class="app-icon">CP</div>
+                  <div class="app-meta">
+                    <h3 class="app-title">Choice Protocol</h3>
+                    <p class="app-desc">Minimal text-adventure with branching choices and hidden state.</p>
+                    <div class="app-footer">
+                      <span class="tag hard">Narrative</span>
+                      <button class="btn install" data-app="choice-protocol">Launch</button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </aside>
+
+            <section class="app-preview" id="appPreview">
+              <div class="preview-shell">
+                <div class="preview-header">
+                  <h3 id="previewTitle">Select an app to preview</h3>
+                  <div class="preview-meta" id="previewMeta">Difficulty • Description</div>
+                </div>
+                <div class="preview-stage" id="previewStage">
+                  <div class="preview-placeholder">App preview will appear here after you choose an app.</div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container section-grid">
+          <div class="section-header">
+            <span class="eyebrow">About Me</span>
+            <h2>Engineering student focused on hardware, software, and practical systems design.</h2>
+            <p>I combine hardware troubleshooting, C programming, embedded logic, and technical documentation to deliver solutions that work from circuits to interfaces.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="glass-card about-card">
+              <h3>My story</h3>
+              <p>As an ambitious engineering student, I build hardware-aware software systems while bringing clarity to technical documentation and practical workflows.</p>
+            </div>
+            <div class="glass-card about-card">
+              <h3>Why I build</h3>
+              <p>I enjoy solving real technical problems, whether optimizing systems, refining code logic, or competing in college-level hackathons.</p>
+            </div>
+            <div class="glass-card about-card">
+              <h3>Core strengths</h3>
+              <ul>
+                <li>C programming and algorithmic logic</li>
+                <li>Hardware troubleshooting and systems tuning</li>
+                <li>Technical documentation and workflow optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey section" id="journey">
+        <div class="container">
+          <div class="section-header center">
+            <span class="eyebrow">My Journey</span>
+            <h2>From research to product launches, every step is purpose-driven.</h2>
+          </div>
+
+          <div class="journey-grid">
+            <article class="journey-card glass-card">
+              <p class="journey-label">2021</p>
+              <h3>Started engineering studies</h3>
+              <p>Started my engineering journey with a focus on hardware systems, embedded logic, and practical software development.</p>
+            </article>
+            <article class="journey-card glass-card">
+              <p class="journey-label">2024</p>
+              <h3>Ghost Free Vault</h3>
+              <p>Developed a secure financial management project for technical showcases including TECH-TANTRA 1.0 and CHAKRAVYUH 2.0.</p>
+            </article>
+            <article class="journey-card glass-card">
+              <p class="journey-label">Today</p>
+              <h3>Strengthening hardware and software skillsets</h3>
+              <p>Focusing on system tuning, technical documentation, and academic research in engineering.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Skills</span>
+            <h2>Technical craftsmanship, interface design, and performance delivery.</h2>
+          </div>
+
+          <div class="skill-grid">
+            <div class="skill-card glass-card">
+              <h3>C Programming</h3>
+              <p>Low-level logic, memory management, data structures, and efficient algorithm design.</p>
+              <div class="skill-bar"><span style="width: 94%"></span></div>
+            </div>
+            <div class="skill-card glass-card">
+              <h3>Python & Java</h3>
+              <p>Scripting, object-oriented design, advanced Java concepts, and core Java programming.</p>
+              <div class="skill-bar"><span style="width: 92%"></span></div>
+            </div>
+            <div class="skill-card glass-card">
+              <h3>DSA & SQL</h3>
+              <p>Algorithms, data structures, query design, database modeling, and practical data handling.</p>
+              <div class="skill-bar"><span style="width: 90%"></span></div>
+            </div>
+            <div class="skill-card glass-card">
+              <h3>Embedded Systems</h3>
+              <p>Microcontroller logic, sensor interfaces, board-level integration, and real-time control design.</p>
+              <div class="skill-bar"><span style="width: 88%"></span></div>
+            </div>
+            <div class="skill-card glass-card">
+              <h3>Documentation</h3>
+              <p>Technical notes, CAD workflows, reports, and structured process documentation for engineering work.</p>
+              <div class="skill-bar"><span style="width: 82%"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tech" id="technologies">
+        <div class="container">
+          <div class="section-header center">
+            <span class="eyebrow">Technologies</span>
+            <h2>Tools and platforms I use to build modern digital experiences.</h2>
+          </div>
+          <div class="tech-grid">
+            <span class="tech-pill">C Programming</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">Advanced Java</span>
+            <span class="tech-pill">DSA</span>
+            <span class="tech-pill">SQL</span>
+            <span class="tech-pill">Hardware Systems</span>
+            <span class="tech-pill">Embedded Logic</span>
+            <span class="tech-pill">Technical Documentation</span>
+            <span class="tech-pill">CAD Workflow</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Featured Projects</span>
+            <h2>Projects that balance design, technical craft, and measurable impact.</h2>
+          </div>
+
+          <div class="project-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="project">Projects</button>
+            <button class="filter-btn" data-filter="research">Research</button>
+            <button class="filter-btn" data-filter="hardware">Hardware</button>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <article class="project-card glass-card" data-filter="hardware">
+              <div class="project-head"><span>Hardware</span><p>2025</p></div>
+              <h3>Fire Detector</h3>
+              <p>Autonomous fire detection system with sensor monitoring, alert logic, and real-time response control.</p>
+              <div class="project-meta">
+                <span>Sensors</span><span>Control</span><span>Safety</span>
+              </div>
+            </article>
+            <article class="project-card glass-card" data-filter="hardware">
+              <div class="project-head"><span>Hardware</span><p>2025</p></div>
+              <h3>Gas Sensor Auto Window Opener</h3>
+              <p>Automated ventilation system that opens windows when hazardous gas levels rise.</p>
+              <div class="project-meta">
+                <span>Automation</span><span>Safety</span><span>Embedded</span>
+              </div>
+            </article>
+            <article class="project-card glass-card" data-filter="project">
+              <div class="project-head"><span>Project</span><p>2024</p></div>
+              <h3>Ghost Free Vault</h3>
+              <p>Secure financial management platform designed for clarity, reliability, and practical usage.</p>
+              <div class="project-meta">
+                <span>C</span><span>System Design</span><span>UX</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-studies" id="case-studies">
+        <div class="container">
+          <div class="section-header center">
+            <span class="eyebrow">Project Case Studies</span>
+            <h2>Deep dives into the process, outcomes, and impact of three flagship initiatives.</h2>
+          </div>
+
+          <div class="case-grid">
+            <article class="case-card glass-card">
+              <h3>Ghost Free Vault</h3>
+              <p>Built a college hackathon financial management platform with secure workflows and practical system design.</p>
+              <ul>
+                <li>Secure data handling and storage design</li>
+                <li>Performance-aware platform structure</li>
+                <li>Technical delivery for campus events</li>
+              </ul>
+            </article>
+            <article class="case-card glass-card">
+              <h3>System Optimization</h3>
+              <p>Improved hardware performance and reliability through system troubleshooting and configuration improvements.</p>
+              <ul>
+                <li>Laptop and PC tuning</li>
+                <li>System stability analysis</li>
+                <li>Workflow-focused optimization</li>
+              </ul>
+            </article>
+            <article class="case-card glass-card">
+              <h3>Engineering Research</h3>
+              <p>Published two technical research papers supported by rigorous testing, documentation, and practical engineering recommendations.</p>
+              <ul>
+                <li>System performance analysis</li>
+                <li>Hardware and software integration</li>
+                <li>Clear technical communication</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Experience</span>
+            <h2>Roles where I delivered web applications, internal platforms, and design systems.</h2>
+          </div>
+
+          <div class="experience-grid">
+            <div class="experience-card glass-card">
+              <span class="experience-role">UG Engineering Student</span>
+              <p>Engineering student focused on hardware and software systems.</p>
+              <p>2021 – Present</p>
+              <ul>
+                <li>Building software systems with C programming and practical hardware debugging.</li>
+                <li>Working on projects that bridge hardware, software, and real-world engineering challenges.</li>
+              </ul>
+            </div>
+            <div class="experience-card glass-card">
+              <span class="experience-role">College Hackathon Participant</span>
+              <p>UG ENGINEERS™</p>
+              <p>2026</p>
+              <ul>
+                <li>Built Ghost Free Vault for college hackathons and technical showcases.</li>
+                <li>Participated in CodeMind AI Hackathon, MindSpark Ideathon, and CHAKRAVYUH 2.0.</li>
+              </ul>
+            </div>
+            <div class="experience-card glass-card">
+              <span class="experience-role">Research Contributor</span>
+              <p>Engineering papers on system optimization</p>
+              <p>2023</p>
+              <ul>
+                <li>Published two papers on hardware systems and optimization techniques.</li>
+                <li>Delivered practical engineering recommendations and documentation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section education" id="education">
+        <div class="container">
+          <div class="section-header center">
+            <span class="eyebrow">Education</span>
+            <h2>Academic foundations and continued technical learning.</h2>
+          </div>
+
+          <div class="education-grid">
+            <div class="education-card glass-card">
+              <h3>UG Engineering Student</h3>
+              <p>Ongoing engineering studies with a focus on hardware and software systems.</p>
+              <span>2021 – Present</span>
+            </div>
+            <div class="education-card glass-card">
+              <h3>Advance Diploma</h3>
+              <p>Software Programming, Disha Computer Institute</p>
+              <span>2025</span>
+            </div>
+            <div class="education-card glass-card">
+              <h3>Hackathon Achievements</h3>
+              <p>Winner at CodeMind AI, participant at MindSpark Ideathon, and presenter at CHAKRAVYUH 2.0.</p>
+              <span>2026</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section certifications" id="certifications">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">Certifications</span>
+            <h2>Verified skills and practical learning on modern web development.</h2>
+          </div>
+
+          <div class="cert-grid">
+            <div class="cert-card glass-card">
+              <h3>Advance Diploma in Software Programming</h3>
+              <p>Disha Computer Institute — strong foundation in programming, algorithms, and system concepts.</p>
+            </div>
+            <div class="cert-card glass-card">
+              <h3>Hackathon Recognition</h3>
+              <p>Winner at CodeMind AI and active participant in MindSpark Ideathon and CHAKRAVYUH 2.0.</p>
+            </div>
+            <div class="cert-card glass-card">
+              <h3>Technical Event Achievement</h3>
+              <p>Presented Ghost Free Vault at TECH-TANTRA 1.0, CHAKRAVYUH 2.0, and college hackathon events.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section achievements" id="achievements">
+        <div class="container">
+          <div class="section-header center">
+            <span class="eyebrow">Achievements</span>
+            <h2>Milestones that speak to impact, trust, and quality delivery.</h2>
+          </div>
+
+          <div class="achievements-grid">
+            <div class="achievement-card glass-card">
+              <h3 class="counter" data-target="2">0</h3>
+              <p>Research papers</p>
+            </div>
+            <div class="achievement-card glass-card">
+              <h3 class="counter" data-target="4">0</h3>
+              <p>Years of experience</p>
+            </div>
+            <div class="achievement-card glass-card">
+              <h3 class="counter" data-target="3">0</h3>
+              <p>Projects delivered</p>
+            </div>
+            <div class="achievement-card glass-card">
+              <h3 class="counter" data-target="3">0</h3>
+              <p>Hackathon events</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats" id="github-stats">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow">GitHub Stats</span>
+            <h2>Recent activity, repositories, and impact across codebases.</h2>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stats-card glass-card">
+              <span>Repositories</span>
+              <strong>3</strong>
+            </div>
+            <div class="stats-card glass-card">
+              <span>Projects</span>
+              <strong>3</strong>
+            </div>
+            <div class="stats-card glass-card">
+              <span>Research Papers</span>
+              <strong>2</strong>
+            </div>
+            <div class="stats-card glass-card">
+              <span>Experience</span>
+              <strong>4 years</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section-header center">
+            <span class="eyebrow">Services</span>
+            <h2>How I partner with teams to ship polished products.</h2>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card glass-card">
+              <h3>Web Application Development</h3>
+              <p>From landing pages to product dashboards, I build fast, responsive experiences using vanilla web technologies.</p>
+            </div>
+            <div class="service-card glass-card">
+              <h3>Design System Strategy</h3>
+              <p>Create reusable UI systems that keep products consistent, scalable, and easy to maintain.</p>
+            </div>
+            <div class="service-card glass-card">
+              <h3>Performance Optimization</h3>
+              <p>Improve load times, reduce cognitive overhead, and deliver polished, smooth interactions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section why" id="why">
+        <div class="container why-grid">
+          <div class="section-header">
+            <span class="eyebrow">Why Work With Me</span>
+            <h2>Focused collaboration, polished execution, and dependable delivery.</h2>
+          </div>
+          <div class="why-cards">
+            <div class="why-card glass-card">
+              <h3>Product-first thinking</h3>
+              <p>I always consider end users and business goals when defining technical solutions.</p>
+            </div>
+            <div class="why-card glass-card">
+              <h3>High-fidelity execution</h3>
+              <p>Design and code are aligned, with every interaction crafted to feel intuitive and intentional.</p>
+            </div>
+            <div class="why-card glass-card">
+              <h3>Responsive collaboration</h3>
+              <p>Clear communication, fast iteration, and reliability from kickoff to launch.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container contact-centered-wrapper">
+          <div class="contact-info glass-card contact-centered">
+            <span class="eyebrow">Contact</span>
+            <h2>Let’s build the next exceptional digital experience together.</h2>
+            <p>Reach out for product web apps, performance improvements, or research-driven development.</p>
+            <div class="contact-cards">
+              <div class="contact-card email-card">
+                <h3>Email</h3>
+                <p class="email-address">pranavprahaldkulkarni2007@gmail.com</p>
+                <p class="copy-hint">Click to copy</p>
+              </div>
+              <div class="contact-card" data-url="https://www.linkedin.com/in/pranav-kulkarni-a24b823a9/" data-target="_blank" role="button" tabindex="0">
+                <h3>LinkedIn</h3>
+                <p>Click to connect</p>
+              </div>
+              <div class="contact-card" data-url="https://github.com/Pranavpkulkarnii" data-target="_blank" role="button" tabindex="0">
+                <h3>GitHub</h3>
+                <p>Click to visit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Pranav Kulkarni. Crafted for clarity, speed, and modern web excellence.</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Scroll to top">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>
